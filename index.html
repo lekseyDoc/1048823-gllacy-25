@@ -21,14 +21,16 @@
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О компании</a></li>
         </ul>
-        <ul class="user-navigation">
-          <li class="search-link"><a href="#">Поиск</a></li>
+        <ul class="user">
+          <li class="user-item search"><a href="#">Поиск</a></li>
           <li class="login-link"><a href="#">Вход</a></li>
           <li class="cart-empty"><a href="#">Корзина</a></li>
         </ul>
       </nav>
-      <p class="openning-hours">С 10 до 20, ежедневно</p>
-      <p class="phone">8 812 450-25-25</p>
+      <div class="main-contacts">
+        <span class="openning-hours">С 10 до 20, ежедневно</span>
+        <span class="phone">8 812 450-25-25</span>
+      </div>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Интернет-магазин мороженого 'Глейси'</h1>
@@ -41,15 +43,15 @@
       <section class="sales">
         <h2 class="visually-hidden">Выгодные предложения</h2>
         <ul>
-          <li class="sales-item-strawberry">
-            <h3>Малинка даром!</h3>
-            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <p class="button"><a href="#">Хочу варенье!</a></p>
+          <li class="sales-item strawberry">
+            <h3 class="sales-title">Малинка даром!</h3>
+            <p class="sales-item-desc">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a class="button" href="#">Хочу варенье!</a>
           </li>
-          <li class="sales-item-choko">
+          <li class="sales-item choko">
             <h3>Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <p class="button"><a href="#">Хочу шоколадки!</a></p>
+            <a class="button" href="#">Хочу шоколадки!</a>
           </li>
         </ul>
       </section>
@@ -57,11 +59,15 @@
       <section class="popular-items">   <!--Надпись ХИТ должна быть в разметке или добавляется с помощью CSS?-->
         <h2 class="visually-hidden">Популярные виды мороженого</h2>
         <ul>
-          <li class="popular-icecream">
-            <h3 class="popular-icecream-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-            <p class="hit-label">хит</p>
-            <img src="icecream-1.jpg" width="270" height="270" alt="Фото сливочного с апельсиновым джемом и цитрусовой стружкой мороженого">
+          <li class="popular-icecream hit">
+            <div>
+            <a class="popular-icecream-title">Сливочное с апельсиновым джемом и цитрусовой стружкой
+                <img src="icecream-1.jpg" width="270" height="270" alt="Фото сливочного с апельсиновым джемом и цитрусовой стружкой мороженого">
+
+            </a>
+            
             <p class="icecream-price">310 ₽<span>/кг</span></p>
+          </div>
           </li>
           <li class="popular-icecream">
             <h3 class="popular-icecream-title">Сливочно-кофейное с кусочками шоколада</h3>
@@ -84,12 +90,12 @@
         </ul>
       </section>
 
-      <section class="shop-info">
+      <section class="about">
         <h2 class="visually-hidden">Информация о производстве нашего мороженого</h2>
         <p class="shop-summary">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-        <ul class="shop-info-detailes"> 
-          <li>
-            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+        <ul class="shop-info-details"> 
+          <li class="about-item">
+            Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
           </li>
           <li>
             <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
@@ -122,7 +128,7 @@
     </main>
 
     <footer class="main-footer">
-      <section class="footer-social">
+      <section class="footer-social social">
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul>
           <li>
