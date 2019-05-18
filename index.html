@@ -9,8 +9,8 @@
       <nav class="main-header-nav">
         <a class="main-header-logo"><img src="img/logo.svg" width="162" height="73" alt="Логотип интернет-магазина мороженого 'Глейси'"></a>
         <ul class="header-nav-list">
-          <li class="header-nav-item">Каталог
-            <ul class="menu-dropdown">
+          <li class="header-nav-item menu-dropdown">Каталог
+            <ul class="menu-dropdown-list">
               <li class="menu-dropdown-item"><a href="#"><b>Новинки</b></a></li>
               <li class="menu-dropdown-item"><a href="#">Сливочное</a></li>
               <li class="menu-dropdown-item_active"><a href="#">Щербеты</a></li>
@@ -127,7 +127,10 @@
       <section class="subscribe">
           <h2 class="visually-hidden">Подписка на нашу email рассылку</h2>
           <p class="subscribe-description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <!-- Здесь будет форма ввода email и кнопка -->
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+            <input type="text" name="email-field" aria-label="Поле для ввода электронной почты" value="" placeholder="Электронная почта"> <!--Как лучше добавить текст для доступности: оставить aria-label или сделать отдельный label с классом visually-hidden?-->
+            <button class="button button-subcribe" type="submit">Отправить</button>
+          </form>
       </section>
 
       <section class="map">
@@ -169,5 +172,34 @@
         <p>Сделано в HTML Academy © 2019</p>
       </div>
     </footer>
+
+    <section class="modal modal-search">
+      <h2 class="visually-hidden">Поиск по сайту</h2>
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+        <input type="text" name="search-field" value="" placeholder="Что ищем?" aria-label="Поля ввода для поиска по сайту">
+        <button class="visually-hidden" type="submit">Найти</button>
+      </form>
+    </section>
+
+    <section class="modal modal-login">
+      <h2 class="visually-hidden">Окно входа</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <input class="login-field" type="text" name="login" value="" placeholder="Электронная почта" aria-label="Поле ввода электронной почты">
+        <input class="login-field" type="password" name="password" value="" placeholder="Пароль" aria-label="Поле для ввода пароля">
+        <button class="button button-login" type="submit">Войти</button>
+      </form>
+      <a class="modal-login__feature" href="#">Забыли пароль?</a>
+      <a class="modal-login__feature" href="#">Новая регистрация</a>
+    </section>
+
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Задать вопрос</h2>
+      <p class="feedback-text">Мы обязательно вам ответим!</p>
+      <form action="https://echo.htmlacademy.ru" method="post" >
+        <input class="feedback-field" type="text" name="user-name" value="" placeholder="Как вас зовут?" aria-label="Введите ваше имя">
+        <input class="feedback-field" type="text" name="user-email" value="" placeholder="Ваша почта для ответа?" aria-label="Введите электронную почту для ответа">
+        <textarea class="feedback-field" name="user-message" cols="30" rows="8" aria-label="Поле для ввода вашего сообщения">Напишите что-нибудь...</textarea>
+      </form>
+    </section>
   </body>
 </html>
