@@ -24,9 +24,56 @@
             </nav>
                     
             <ul class="user">
-                <li class="user-search"><a href="#">Поиск</a></li>
-                <li class="user-login"><a href="#">Вход</a></li>
-                <li class="user-cart user-cart_full"><a href="#">Корзина</a></li>
+                <li class="user-search dropdown">
+                    <a href="#">Поиск</a>
+                    <div class="dropdown-inner">
+                        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+                            <input type="text" name="search-field" value="" placeholder="Что ищем?" aria-label="Поля ввода для поиска по сайту">
+                            <button class="visually-hidden" type="submit">Найти</button>
+                        </form>
+                    </div>
+                </li>
+                <li class="user-login">
+                    <a href="#">Вход</a>
+                    <div class="dropdown-inner">
+                        <form action="https://echo.htmlacademy.ru" method="post">
+                            <input class="login-field" type="text" name="login" value="" placeholder="Электронная почта" aria-label="Поле ввода электронной почты">
+                            <input class="login-field" type="password" name="password" value="" placeholder="Пароль" aria-label="Поле для ввода пароля">
+                            <button class="button button-login" type="submit">Войти</button>
+                        </form>
+                        <a class="modal-login__feature" href="#">Забыли пароль?</a>
+                        <a class="modal-login__feature" href="#">Новая регистрация</a>
+                    </div>
+                </li>
+                <li class="user-cart user-cart_full dropdown">
+                    <a href="#">Корзина</a>
+                    <div class="dropdown-cart">
+                        <table class="cart">
+                            <tr class="cart-item">
+                                <td><img src="img/icon-del-item.svg" alt="Удалить позицию" width="11" height="11"></td>
+                                <td><img src="img/product-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
+                                <td><a href="#">Пломбир с апельсиновым джемом</a></td>
+                                <td>1,5 кг</td>
+                                <td>x</td>
+                                <td>200 руб.</td>
+                                <td>300 руб.</td>
+                            </tr>
+                            <tr class="cart-item">
+                                <td><img src="img/icon-del-item.svg" alt="Удалить позицию" width="11" height="11"></td>
+                                <td><img src="img/product-3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
+                                <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                                <td>1,5 кг</td>
+                                <td>x</td>
+                                <td>300 руб.</td>
+                                <td>450 руб.</td>
+                            </tr>
+                            <tfoot class="cart-total">
+                                <td colspan="8">Итого: <span class="cart-total-price">750 руб.</span></td>
+                            </tfoot>
+                        </table>
+                        <a class="button button-order" href="#">Оформить заказ</a>
+                    </div>
+                </li>
             </ul>
                     
             <div class="header-contacts">
@@ -198,32 +245,5 @@
             </div>
         </footer>
 
-        <section class="modal modal-cart">
-            <h2 class="visually-hidden">Товары в корзине</h2>
-            <table class="cart">
-                <tr class="cart-item">
-                    <td><img src="img/icon-del-item.svg" alt="Удалить позицию" width="11" height="11"></td>
-                    <td><img src="img/product-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
-                    <td><a href="#">Пломбир с апельсиновым джемом</a></td>
-                    <td>1,5 кг</td>
-                    <td>x</td>
-                    <td>200 руб.</td>
-                    <td>300 руб.</td>
-                </tr>
-                <tr class="cart-item">
-                    <td><img src="img/icon-del-item.svg" alt="Удалить позицию" width="11" height="11"></td>
-                    <td><img src="img/product-3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
-                    <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                    <td>1,5 кг</td>
-                    <td>x</td>
-                    <td>300 руб.</td>
-                    <td>450 руб.</td>
-                </tr>
-                <tfoot class="cart-total">
-                    <td colspan="8">Итого: <span class="cart-total-price">750 руб.</span></td>
-                </tfoot>
-            </table>
-            <a class="button button-order" href="#">Оформить заказ</a>
-        </section>
     </body>
 </html>
