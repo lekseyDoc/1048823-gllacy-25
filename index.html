@@ -24,8 +24,27 @@
       </nav>
       
       <ul class="user">
-        <li class="user-search"><a href="#">Поиск</a></li>
-        <li class="user-login"><a href="#">Вход</a></li>
+        <li class="user-search dropdown">
+          <a href="#">Поиск</a>
+          <div class="dropdown-inner">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+              <input type="text" name="search-field" value="" placeholder="Что ищем?" aria-label="Поля ввода для поиска по сайту">
+              <button class="visually-hidden" type="submit">Найти</button>
+            </form>
+          </div>
+        </li>
+        <li class="user-login">
+          <a href="#">Вход</a>
+          <div class="dropdown-inner">
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <input class="login-field" type="text" name="login" value="" placeholder="Электронная почта" aria-label="Поле ввода электронной почты">
+              <input class="login-field" type="password" name="password" value="" placeholder="Пароль" aria-label="Поле для ввода пароля">
+              <button class="button button-login" type="submit">Войти</button>
+            </form>
+            <a class="modal-login__feature" href="#">Забыли пароль?</a>
+            <a class="modal-login__feature" href="#">Новая регистрация</a>
+          </div>
+        </li>
         <li class="user-cart user-cart_empty"><a href="#">Корзина</a></li>
       </ul>
       
@@ -172,26 +191,6 @@
         <p>Сделано в HTML Academy © 2019</p>
       </div>
     </footer>
-
-  <!--Всплывающие окна-->
-    <section class="modal modal-search">
-      <h2 class="visually-hidden">Поиск по сайту</h2>
-      <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-        <input type="text" name="search-field" value="" placeholder="Что ищем?" aria-label="Поля ввода для поиска по сайту">
-        <button class="visually-hidden" type="submit">Найти</button>
-      </form>
-    </section>
-
-    <section class="modal modal-login">
-      <h2 class="visually-hidden">Окно входа</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <input class="login-field" type="text" name="login" value="" placeholder="Электронная почта" aria-label="Поле ввода электронной почты">
-        <input class="login-field" type="password" name="password" value="" placeholder="Пароль" aria-label="Поле для ввода пароля">
-        <button class="button button-login" type="submit">Войти</button>
-      </form>
-      <a class="modal-login__feature" href="#">Забыли пароль?</a>
-      <a class="modal-login__feature" href="#">Новая регистрация</a>
-    </section>
 
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Задать вопрос</h2>
