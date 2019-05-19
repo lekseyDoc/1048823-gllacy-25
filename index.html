@@ -33,16 +33,20 @@
             </form>
           </div>
         </li>
-        <li class="user-login">
+        <li class="user-login dropdown">
           <a href="#">Вход</a>
           <div class="dropdown-inner">
             <form action="https://echo.htmlacademy.ru" method="post">
               <input class="login-field" type="text" name="login" value="" placeholder="Электронная почта" aria-label="Поле ввода электронной почты">
               <input class="login-field" type="password" name="password" value="" placeholder="Пароль" aria-label="Поле для ввода пароля">
-              <button class="button button-login" type="submit">Войти</button>
+              <div class="login-form-bottom">
+                <button class="button button-login" type="submit">Войти</button>
+                <div class="login-form-links>"
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </div>
+              </div>
             </form>
-            <a class="modal-login__feature" href="#">Забыли пароль?</a>
-            <a class="modal-login__feature" href="#">Новая регистрация</a>
           </div>
         </li>
         <li class="user-cart user-cart_empty"><a href="#">Корзина</a></li>
